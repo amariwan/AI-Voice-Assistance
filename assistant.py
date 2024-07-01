@@ -6,6 +6,7 @@ import webbrowser
 import pyautogui
 import wikipedia
 import os
+from dotenv import load_dotenv
 import psutil
 import wolframalpha
 from time import sleep
@@ -18,13 +19,16 @@ logging.basicConfig(level=logging.INFO)
 # Initialize text-to-speech engine
 engine = pyttsx3.init()
 
+# Load environment variables from .env file
+load_dotenv()
+
 # User-specific data placeholders
 USER_NAME = os.getenv("USER_NAME", "user")
 USER_EMAIL = os.getenv("USER_EMAIL", "your_email")
 USER_PASSWORD = os.getenv("USER_PASSWORD", "your_password")
 WOLFRAM_APP_ID = os.getenv("WOLFRAM_APP_ID", "your_wolfram_app_id")
-WEATHER_URL = "https://weather.com/weather/today/l/26.62,87.36?par=google&temp=c"
 USER_AGENT = os.getenv("USER_AGENT", "your_user_agent")
+WEATHER_URL = "https://weather.com/weather/today/l/26.62,87.36?par=google&temp=c"
 
 def speak(audio):
     """Speaks out the given audio text."""

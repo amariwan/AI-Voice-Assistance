@@ -1,0 +1,10 @@
+pyttsx3==2.90
+SpeechRecognition==3.8.1
+requests==2.28.1
+beautifulsoup4==4.11.1
+pyautogui==0.9.53
+wikipedia-api==0.5.4
+psutil==5.9.0
+wolframalpha==5.0.0
+fbchat==1.9.6
+pyaudio==0.2.11
